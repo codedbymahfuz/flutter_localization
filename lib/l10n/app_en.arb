@@ -1,0 +1,9 @@
+{
+  "alphabet": "A",
+  "appSubtitle": "Flutter Localization Demo",
+  "currentLanguage": "Current language",
+  "language": "English",
+  "welcomeMessage": "Congratulations! You have selected\nEnglish"
+    
+  
+}
