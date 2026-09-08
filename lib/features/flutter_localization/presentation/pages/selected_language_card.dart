@@ -31,7 +31,7 @@ class SelectedLanguageCard extends StatelessWidget {
 
             Text(
               currentLanguage,
-              style: TextStyle(fontSize: 13, fontWeight: FontWeight.w300),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
             ),
 
             const SizedBox(height: 7),
@@ -49,7 +49,7 @@ class SelectedLanguageCard extends StatelessWidget {
               welcomeMessage,
               textAlign: TextAlign.center,
               maxLines: 2,
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
             ),
 
             const SizedBox(height: 17),

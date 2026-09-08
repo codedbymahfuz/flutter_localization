@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localization/features/flutter_localization/presentation/cubit/cubit.dart';
 import 'package:flutter_localization/features/flutter_localization/presentation/pages/language_switch_toggle.dart';
 import 'package:flutter_localization/features/flutter_localization/presentation/pages/selected_language_card.dart';
 import 'package:flutter_localization/l10n/app_localizations.dart';
@@ -43,14 +45,16 @@ class HomeScreen extends StatelessWidget {
 
             SizedBox(height: height * 0.1),
 
-            LanguageSwitchToggle(
-              banglaOnTap: () {
-                debugPrint("Bangla button Click");
-              },
-
-              englishOnTap: () {
-                debugPrint("English button Click");
-              },
+            ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 350),
+              child: LanguageSwitchToggle(
+                banglaOnTap: () {
+                  context.read<LocaleCubit>().changeLocale("bn");
+                },
+                englishOnTap: () {
+                  context.read<LocaleCubit>().changeLocale("en");
+                },
+              ),
             ),
 
             SizedBox(height: height * 0.1),
